@@ -1,7 +1,7 @@
 /*
 * 构造函数
 */
-import {addListener,triggerEmit} from './init';
+import {addListener,triggerEmit,removeListener} from './init';
 class EventEmeitter {
 	constructor() {
 		this._events = this._events || new Map(); // 储存事件/回调键值对
@@ -11,4 +11,5 @@ class EventEmeitter {
 
 addListener(EventEmeitter)
 triggerEmit(EventEmeitter)
+removeListener(EventEmeitter)
 export default EventEmeitter
